@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none">
+	<listeners>
+		<listener class-name="utilities.ExtentReportManager"></listener>
+	</listeners>
+	<test name="Test1">
+		<parameter name="Browser" value="chrome"></parameter>
+		<parameter name="Url" value="https://www.urbanladder.com/"></parameter>
+		<!-- Grouping things here for sanity , regression etc. -->
+
+		<!--<groups>
+			<run>
+				<include name="Sanity"></include>
+			</run>
+		</groups>-->
+
+		<classes>
+			<class name="test_Book.BaseClass" />
+		</classes>
+	</test>
+
+	<!-- <test thread-count="5" name="Test2">
+  <parameter name="Browser" value="edge"></parameter>
+  <parameter name="Url" value="https://www.urbanladder.com/"></parameter>
+    
+
+		<groups>
+			<run>
+				<include name="Sanity"></include>
+			</run>
+		</groups>
+
+		<classes>
+			<class name="test_Book.BaseClass" />
+		</classes>
+  </test> -->
+</suite> 
