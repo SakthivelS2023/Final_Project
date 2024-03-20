@@ -10,21 +10,20 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import PageObjectModel.TC_001_Verify_Website;
+import PageObjectModel.TC_002_DisplayBookShelves;
+import PageObjectModel.TC_003_FilterBookShelves;
+import PageObjectModel.TC_004_GiftCard;
+import PageObjectModel.TC_005_GiftCardFormsNegative;
+import PageObjectModel.TC_006_GiftCardFormsPositive;
+import PageObjectModel.bsElement;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import test_Book.POM.bsElement;
-import test_Book.POM.TC_001_Verify_Website;
-import test_Book.POM.TC_002_DisplayBookShelves;
-import test_Book.POM.TC_003_FilterBookShelves;
-import test_Book.POM.TC_004_GiftCard;
-import test_Book.POM.TC_005_GiftCardFormsNegative;
-import test_Book.POM.TC_006_GiftCardFormsPositive;
 
 @Listeners(utilities.ExtentReportManager.class)
 public class BaseClass  {

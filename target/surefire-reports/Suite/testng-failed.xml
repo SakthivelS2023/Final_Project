@@ -12,9 +12,6 @@
         <methods>
           <include name="displayBookShelves"/>
           <include name="setup_Browser"/>
-          <include name="giftCardformPositive"/>
-          <include name="giftCardformNegative"/>
-          <include name="giftCard"/>
           <include name="close_Browser"/>
         </methods>
       </class> <!-- test_Book.BaseClass -->
