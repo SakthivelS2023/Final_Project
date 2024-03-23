@@ -2,26 +2,12 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-18T17:08:14 IST" name="Suite" finished-at="2024-03-18T17:11:09 IST" duration-ms="174398">
+  <suite started-at="2024-03-20T17:13:45 IST" name="Suite" finished-at="2024-03-20T17:16:41 IST" duration-ms="176064">
     <groups>
-      <group name="Sanity">
-        <method signature="BaseClass.VerifyWebsite()[pri:1, instance:test_Book.BaseClass@9f116cc]" name="VerifyWebsite" class="test_Book.BaseClass"/>
-        <method signature="BaseClass.displayBookShelves()[pri:2, instance:test_Book.BaseClass@9f116cc]" name="displayBookShelves" class="test_Book.BaseClass"/>
-        <method signature="BaseClass.ByAtHome()[pri:3, instance:test_Book.BaseClass@9f116cc]" name="ByAtHome" class="test_Book.BaseClass"/>
-        <method signature="BaseClass.giftCard()[pri:4, instance:test_Book.BaseClass@9f116cc]" name="giftCard" class="test_Book.BaseClass"/>
-        <method signature="BaseClass.giftCardformNegative()[pri:5, instance:test_Book.BaseClass@9f116cc]" name="giftCardformNegative" class="test_Book.BaseClass"/>
-        <method signature="BaseClass.giftCardformPositive()[pri:6, instance:test_Book.BaseClass@9f116cc]" name="giftCardformPositive" class="test_Book.BaseClass"/>
-      </group> <!-- Sanity -->
-      <group name="Regression">
-        <method signature="BaseClass.displayBookShelves()[pri:2, instance:test_Book.BaseClass@9f116cc]" name="displayBookShelves" class="test_Book.BaseClass"/>
-        <method signature="BaseClass.ByAtHome()[pri:3, instance:test_Book.BaseClass@9f116cc]" name="ByAtHome" class="test_Book.BaseClass"/>
-        <method signature="BaseClass.giftCardformNegative()[pri:5, instance:test_Book.BaseClass@9f116cc]" name="giftCardformNegative" class="test_Book.BaseClass"/>
-        <method signature="BaseClass.giftCardformPositive()[pri:6, instance:test_Book.BaseClass@9f116cc]" name="giftCardformPositive" class="test_Book.BaseClass"/>
-      </group> <!-- Regression -->
     </groups>
-    <test started-at="2024-03-18T17:08:14 IST" name="Test1" finished-at="2024-03-18T17:11:09 IST" duration-ms="174398">
+    <test started-at="2024-03-20T17:13:45 IST" name="Test1" finished-at="2024-03-20T17:16:41 IST" duration-ms="176064">
       <class name="test_Book.BaseClass">
-        <test-method is-config="true" signature="setup_Browser(java.lang.String,java.lang.String)[pri:0, instance:test_Book.BaseClass@9f116cc]" started-at="2024-03-18T17:08:15 IST" name="setup_Browser" finished-at="2024-03-18T17:08:23 IST" duration-ms="8664" status="PASS">
+        <test-method is-config="true" signature="setup_Browser(java.lang.String,java.lang.String)[pri:0, instance:test_Book.BaseClass@9f116cc]" started-at="2024-03-20T17:13:45 IST" name="setup_Browser" finished-at="2024-03-20T17:14:20 IST" duration-ms="34981" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,31 +23,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup_Browser -->
-        <test-method signature="VerifyWebsite()[pri:1, instance:test_Book.BaseClass@9f116cc]" started-at="2024-03-18T17:08:23 IST" name="VerifyWebsite" finished-at="2024-03-18T17:08:39 IST" duration-ms="15706" status="PASS">
+        <test-method signature="VerifyWebsite()[pri:1, instance:test_Book.BaseClass@9f116cc]" started-at="2024-03-20T17:14:20 IST" name="VerifyWebsite" finished-at="2024-03-20T17:14:36 IST" duration-ms="15734" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyWebsite -->
-        <test-method signature="displayBookShelves()[pri:2, instance:test_Book.BaseClass@9f116cc]" started-at="2024-03-18T17:08:39 IST" name="displayBookShelves" finished-at="2024-03-18T17:09:26 IST" duration-ms="46977" status="PASS">
+        <test-method signature="displayBookShelves()[pri:2, instance:test_Book.BaseClass@9f116cc]" started-at="2024-03-20T17:14:36 IST" name="displayBookShelves" finished-at="2024-03-20T17:15:25 IST" duration-ms="49202" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- displayBookShelves -->
-        <test-method signature="ByAtHome()[pri:3, instance:test_Book.BaseClass@9f116cc]" started-at="2024-03-18T17:09:27 IST" name="ByAtHome" finished-at="2024-03-18T17:09:59 IST" duration-ms="32597" status="PASS">
+        <test-method signature="ByAtHome()[pri:3, instance:test_Book.BaseClass@9f116cc]" started-at="2024-03-20T17:15:26 IST" name="ByAtHome" finished-at="2024-03-20T17:15:58 IST" duration-ms="32291" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ByAtHome -->
-        <test-method signature="giftCard()[pri:4, instance:test_Book.BaseClass@9f116cc]" started-at="2024-03-18T17:10:00 IST" name="giftCard" finished-at="2024-03-18T17:10:43 IST" duration-ms="43095" status="PASS">
+        <test-method signature="giftCard()[pri:4, instance:test_Book.BaseClass@9f116cc]" started-at="2024-03-20T17:15:58 IST" name="giftCard" finished-at="2024-03-20T17:16:15 IST" duration-ms="16388" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- giftCard -->
-        <test-method signature="giftCardformNegative()[pri:5, instance:test_Book.BaseClass@9f116cc]" started-at="2024-03-18T17:10:43 IST" name="giftCardformNegative" finished-at="2024-03-18T17:10:55 IST" duration-ms="12435" status="PASS">
+        <test-method signature="giftCardformNegative()[pri:5, instance:test_Book.BaseClass@9f116cc]" started-at="2024-03-20T17:16:15 IST" name="giftCardformNegative" finished-at="2024-03-20T17:16:27 IST" duration-ms="12356" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- giftCardformNegative -->
-        <test-method signature="giftCardformPositive()[pri:6, instance:test_Book.BaseClass@9f116cc]" started-at="2024-03-18T17:10:56 IST" name="giftCardformPositive" finished-at="2024-03-18T17:11:07 IST" duration-ms="11005" status="PASS">
+        <test-method signature="giftCardformPositive()[pri:6, instance:test_Book.BaseClass@9f116cc]" started-at="2024-03-20T17:16:28 IST" name="giftCardformPositive" finished-at="2024-03-20T17:16:39 IST" duration-ms="11160" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- giftCardformPositive -->
-        <test-method is-config="true" signature="close_Browser()[pri:0, instance:test_Book.BaseClass@9f116cc]" started-at="2024-03-18T17:11:07 IST" name="close_Browser" finished-at="2024-03-18T17:11:09 IST" duration-ms="1264" status="PASS">
+        <test-method is-config="true" signature="close_Browser()[pri:0, instance:test_Book.BaseClass@9f116cc]" started-at="2024-03-20T17:16:39 IST" name="close_Browser" finished-at="2024-03-20T17:16:41 IST" duration-ms="1315" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close_Browser -->

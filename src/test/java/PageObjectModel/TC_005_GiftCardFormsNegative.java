@@ -20,38 +20,47 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Listeners;
 
 import test_Book.BaseClass;
+
 @Listeners(utilities.ExtentReportManager.class)
 public class TC_005_GiftCardFormsNegative extends BaseClass {
-	
+
 	WebDriver driver;
-	
-	//Constructor
-	public TC_005_GiftCardFormsNegative(WebDriver driver)
-	{
-		this.driver=driver;
+
+	// Constructor
+	public TC_005_GiftCardFormsNegative(WebDriver driver) {
+		this.driver = driver;
 	}
-	
 
-	//Locators
-
-	
-	
-	//Action
+	// Action
 	public void GiftCardformNegative() throws InterruptedException, IOException {
+		// Typing Money
+		
+		logger.info("Starting TestCase 5");
+		logger.info("Typing amount");
 		driver.findElement(By.xpath("//input[@class='tDZNG _16Q29']")).sendKeys("5000"); // money
 		Thread.sleep(1000);
+
+		// Clicking month
+		logger.info("Clicking month");
 		driver.findElement(By.xpath("//select[@class='Upz18 _1hLiD UJU2v']")).click();
 		driver.findElement(By.xpath("//select[@class='Upz18 _1hLiD UJU2v']/option[3]")).click();
+
+		// Clicking date
+		logger.info("Clicking date");
 		driver.findElement(By.xpath("//select[@class='Upz18 _1hLiD UJU2v'][2]")).click();
 		driver.findElement(By.xpath("//select[@class='Upz18 _1hLiD UJU2v'][2]/option[3]")).click();
-		// Button
+
+		// Next Button
+		logger.info("Click next");
 		driver.findElement(By.xpath("//button[@class='_1IFIb _1fVSi action-button _1gIUf _1XfDi']")).click();
 
 		// inserting values for from
+		logger.info("Giving from details");
 		XSSFWorkbook workbook1 = null;
 
 		try {
-			FileInputStream fileInputStream = new FileInputStream(System.getProperty("user.dir")+"\\excel\\input.xlsx");
+			FileInputStream fileInputStream = new FileInputStream(
+					System.getProperty("user.dir") + "\\excel\\input.xlsx");
 			workbook1 = new XSSFWorkbook(fileInputStream);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -60,6 +69,9 @@ public class TC_005_GiftCardFormsNegative extends BaseClass {
 		}
 
 		XSSFSheet xssfSheet = workbook1.getSheet("Sheet1");
+
+		// Inserting value for from
+		logger.info("Giving to details");
 		XSSFRow row = xssfSheet.getRow(0);
 		XSSFCell cell = row.getCell(0);
 		String c1 = cell.getStringCellValue();
@@ -76,6 +88,7 @@ public class TC_005_GiftCardFormsNegative extends BaseClass {
 		driver.findElement(By.name("recipient_mobile_number")).sendKeys(c3);
 
 		// inserting value for to
+
 		row = xssfSheet.getRow(3);
 		cell = row.getCell(0);
 		String c4 = cell.getStringCellValue();
@@ -103,23 +116,27 @@ public class TC_005_GiftCardFormsNegative extends BaseClass {
 		Thread.sleep(3000);
 
 		// click confirm button
-
+		logger.info("Clicking confirm button");
 		driver.findElement(By.cssSelector("button[type='submit']")).click();
 		Thread.sleep(5000);
-		
+
+		// Taking screenshot of error message
+		logger.info("Capture error message");
 		TakesScreenshot screenshot = (TakesScreenshot) driver;
 		File source = screenshot.getScreenshotAs(OutputType.FILE);
-		String timeStamp=new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-		
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+
 		String repName = "Error_Message-SS-" + timeStamp + ".png";
 		try {
-		FileUtils.copyFile(source,new File(System.getProperty("user.dir")+"\\ScreenShot\\"+repName));
-			
+			FileUtils.copyFile(source, new File(System.getProperty("user.dir") + "\\ScreenShot\\" + repName));
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println("Error Message Screenshot is captured and saved successfully");	
-			
+		System.out.println("Error Message Screenshot is captured and saved successfully");
+		logger.info("Ending TestCase 5");
+		logger.info("***********************");
+
 	}
-	
+
 }

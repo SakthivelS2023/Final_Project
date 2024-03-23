@@ -1,0 +1,71 @@
+21:00:21.017 [main] INFO  test_Book.BaseClass - Starting TestCase 1
+21:00:26.035 [main] INFO  test_Book.BaseClass - **Urban Ladder site is opened!!**
+21:00:28.453 [main] INFO  test_Book.BaseClass - Screenshot captured
+21:00:28.454 [main] INFO  test_Book.BaseClass - Ending  TestCase 1
+21:00:28.454 [main] INFO  test_Book.BaseClass - *********************
+21:00:28.874 [main] INFO  test_Book.BaseClass - Starting TestCase 2
+21:00:28.913 [main] INFO  test_Book.BaseClass - Scrolling to find Bookshelves option
+21:00:33.968 [main] INFO  test_Book.BaseClass - Clicking Bookshelves
+21:00:42.674 [main] INFO  test_Book.BaseClass - Login Popup closed
+21:00:47.866 [main] INFO  test_Book.BaseClass - Clicking Price
+21:00:48.068 [main] INFO  test_Book.BaseClass - Draging the slider
+21:00:51.798 [main] INFO  test_Book.BaseClass - Clicking storage
+21:00:56.981 [main] INFO  test_Book.BaseClass - Clicking open
+21:01:02.176 [main] INFO  test_Book.BaseClass - Click Out-Of-Stack
+21:01:07.292 [main] INFO  test_Book.BaseClass - Fetching Top three result
+21:01:12.420 [main] INFO  test_Book.BaseClass - Writing Output in Excel
+21:01:16.858 [main] INFO  test_Book.BaseClass - Taking Screenshot of bookshelves
+21:01:16.858 [main] INFO  test_Book.BaseClass - Ending TestCase 1
+21:01:16.858 [main] INFO  test_Book.BaseClass - *****************************
+21:01:17.070 [main] INFO  test_Book.BaseClass - Starting TestCase 3
+21:01:22.072 [main] INFO  test_Book.BaseClass - Again clicking Out-of-stack
+21:01:27.161 [main] INFO  test_Book.BaseClass - Clicking Brand
+21:01:32.339 [main] INFO  test_Book.BaseClass - Clicking By the home option
+21:01:35.545 [main] INFO  test_Book.BaseClass - Fetching all the result
+21:01:38.736 [main] INFO  test_Book.BaseClass - Writing all the result in excel
+21:01:38.908 [main] INFO  test_Book.BaseClass - Scrolling up
+21:01:48.938 [main] INFO  test_Book.BaseClass - Endinging TestCase 3
+21:01:48.938 [main] INFO  test_Book.BaseClass - ************************
+21:01:51.176 [main] INFO  test_Book.BaseClass - Starting TestCase 4
+21:01:51.176 [main] INFO  test_Book.BaseClass - Clicking giftcard option
+21:01:57.422 [main] INFO  test_Book.BaseClass - Scrolling down 
+21:01:59.443 [main] INFO  test_Book.BaseClass - Clicking Birthday option
+21:02:01.614 [main] INFO  test_Book.BaseClass - Ending TestCase 4
+21:02:01.614 [main] INFO  test_Book.BaseClass - *************************
+21:02:01.882 [main] INFO  test_Book.BaseClass - Starting TestCase 5
+21:02:01.883 [main] INFO  test_Book.BaseClass - Typing amount
+21:02:02.981 [main] INFO  test_Book.BaseClass - Clicking month
+21:02:03.182 [main] INFO  test_Book.BaseClass - Clicking date
+21:02:03.399 [main] INFO  test_Book.BaseClass - Click next
+21:02:03.545 [main] INFO  test_Book.BaseClass - Giving from details
+21:02:03.692 [main] INFO  test_Book.BaseClass - Giving to details
+21:02:07.817 [main] INFO  test_Book.BaseClass - Clicking confirm button
+21:02:12.948 [main] INFO  test_Book.BaseClass - Capture error message
+21:02:13.164 [main] INFO  test_Book.BaseClass - Ending TestCase 5
+21:02:13.164 [main] INFO  test_Book.BaseClass - ***********************
+21:02:13.402 [main] INFO  test_Book.BaseClass - Starting TestCase 6
+21:02:18.403 [main] INFO  test_Book.BaseClass - Clearing invalid input
+21:02:18.465 [main] INFO  test_Book.BaseClass - Giving valid input
+21:02:18.572 [main] INFO  test_Book.BaseClass - Clicking submit
+21:02:23.711 [main] INFO  test_Book.BaseClass - Taking Screenshot
+21:02:24.132 [main] INFO  test_Book.BaseClass - Ending TestCase 6
+21:02:24.132 [main] INFO  test_Book.BaseClass - ********************
+21:19:12.424 [main] INFO  test_Book.BaseClass - Starting TestCase 1
+21:19:17.450 [main] INFO  test_Book.BaseClass - **Urban Ladder site is opened!!**
+21:19:20.060 [main] INFO  test_Book.BaseClass - Screenshot captured
+21:19:20.060 [main] INFO  test_Book.BaseClass - Ending  TestCase 1
+21:19:20.060 [main] INFO  test_Book.BaseClass - *********************
+21:19:20.639 [main] INFO  test_Book.BaseClass - Starting TestCase 2
+21:19:20.691 [main] INFO  test_Book.BaseClass - Scrolling to find Bookshelves option
+21:19:25.815 [main] INFO  test_Book.BaseClass - Clicking Bookshelves
+21:19:34.140 [main] INFO  test_Book.BaseClass - Login Popup closed
+21:19:39.338 [main] INFO  test_Book.BaseClass - Clicking Price
+21:19:39.546 [main] INFO  test_Book.BaseClass - Draging the slider
+21:19:43.257 [main] INFO  test_Book.BaseClass - Clicking storage
+21:19:48.486 [main] INFO  test_Book.BaseClass - Clicking open
+21:19:53.758 [main] INFO  test_Book.BaseClass - Click Out-Of-Stack
+21:19:58.962 [main] INFO  test_Book.BaseClass - Fetching Top three result
+21:20:04.173 [main] INFO  test_Book.BaseClass - Writing Output in Excel
+21:20:08.787 [main] INFO  test_Book.BaseClass - Taking Screenshot of bookshelves
+21:20:08.787 [main] INFO  test_Book.BaseClass - Ending TestCase 1
+21:20:08.787 [main] INFO  test_Book.BaseClass - *****************************

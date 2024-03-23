@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -24,12 +25,21 @@ public class ExtentReportManager implements ITestListener {
 	public ExtentTest test;
 	String repName;
 	public void onStart(ITestContext testContext) {
+		
+		//Time stamp
+		
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());// time stamp
 		repName = "Test-Report-" + timeStamp + ".html";
+		
+		//ui information
+		
 		sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir")+"\\Report\\" + repName);// specify location of the report
 		sparkReporter.config().setDocumentTitle("Urban Ladder"); // Title of report
 		sparkReporter.config().setReportName("Automation  Testing"); // name of the report
 		sparkReporter.config().setTheme(Theme.STANDARD);
+		
+		//Adding others details about testing
+		
 		extent = new ExtentReports();
 		extent.attachReporter(sparkReporter);
 		extent.setSystemInfo("Application", "Urban Ladder ");
@@ -37,12 +47,14 @@ public class ExtentReportManager implements ITestListener {
 		extent.setSystemInfo("User Name", System.getProperty("user.name"));
 		extent.setSystemInfo("Environemnt", "QA");
 		extent.setSystemInfo("Operating System", System.getProperty("os.name"));
-		String browser = testContext.getCurrentXmlTest().getParameter("browser");
-		extent.setSystemInfo("Browser",browser);
-		List<String> includedGroups = testContext.getCurrentXmlTest().getIncludedGroups();
-		if(!includedGroups.isEmpty()) {
-		extent.setSystemInfo("Groups", includedGroups.toString());
-		}
+		extent.setSystemInfo("Browser","Chrome");
+		
+		// groups information from xml will be here
+				List<String> includedGroups = testContext.getCurrentXmlTest().getIncludedGroups();
+				if (!includedGroups.isEmpty()) {
+					extent.setSystemInfo("Groups", includedGroups.toString());
+				}
+		
 	}
 	public void onTestSuccess(ITestResult result) {
 		test = extent.createTest(result.getTestClass().getName());
@@ -54,7 +66,7 @@ public class ExtentReportManager implements ITestListener {
 
 	public void onTestFailure(ITestResult result) {
 		test = extent.createTest(result.getTestClass().getName());
-		test.assignCategory(result.getMethod().getGroups());
+		test.assignCategory(result.getMethod().getGroups()); // to display groups in report
 		test.log(Status.FAIL,result.getName()+" got failed");
 		test.log(Status.INFO, result.getThrowable().getMessage());
 		String imgPath = new BaseClass().captureScreen(result.getName());
@@ -62,7 +74,7 @@ public class ExtentReportManager implements ITestListener {
 	}
 	public void onTestSkipped(ITestResult result) {
 		test = extent.createTest(result.getTestClass().getName());
-		test.assignCategory(result.getMethod().getGroups());
+		test.assignCategory(result.getMethod().getGroups()); // to display groups in report
 		test.log(Status.SKIP, result.getName()+" got skipped");
 		test.log(Status.INFO, result.getThrowable().getMessage());
 	}

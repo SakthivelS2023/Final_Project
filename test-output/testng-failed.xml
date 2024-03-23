@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="Url" value="https://www.urbanladder.com/"/>
+  <parameter name="Browser" value="chrome"/>
   <listeners>
     <listener class-name="utilities.ExtentReportManager"/>
   </listeners>
-  <test thread-count="5" name="Test2(failed)">
-    <parameter name="Url" value="https://www.urbanladder.com/"/>
-    <parameter name="Browser" value="edge"/>
+  <test thread-count="5" name="Test1(failed)">
     <classes>
       <class name="test_Book.BaseClass">
         <methods>
-          <include name="displayBookShelves"/>
           <include name="setup_Browser"/>
+          <include name="displayBookShelves"/>
+          <include name="giftCardformPositive"/>
+          <include name="giftCardformNegative"/>
           <include name="close_Browser"/>
+          <include name="giftCard"/>
+          <include name="ByAtHome"/>
         </methods>
       </class> <!-- test_Book.BaseClass -->
     </classes>
-  </test> <!-- Test2(failed) -->
+  </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

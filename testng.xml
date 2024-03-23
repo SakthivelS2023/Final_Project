@@ -4,10 +4,11 @@
 	<listeners>
 		<listener class-name="utilities.ExtentReportManager"></listener>
 	</listeners>
+	<parameter name="Browser" value="chrome"></parameter>
+	<parameter name="Url" value="https://www.urbanladder.com/"></parameter>
+
 	<test name="Test1">
-		<parameter name="Browser" value="chrome"></parameter>
-		<parameter name="Url" value="https://www.urbanladder.com/"></parameter>
-		
+
 
 		<classes>
 			<class name="test_Book.BaseClass" />

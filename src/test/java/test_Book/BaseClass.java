@@ -5,13 +5,16 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -22,16 +25,19 @@ import PageObjectModel.TC_003_FilterBookShelves;
 import PageObjectModel.TC_004_GiftCard;
 import PageObjectModel.TC_005_GiftCardFormsNegative;
 import PageObjectModel.TC_006_GiftCardFormsPositive;
-import PageObjectModel.bsElement;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 @Listeners(utilities.ExtentReportManager.class)
 public class BaseClass  {
 	static public WebDriver driver;
-	protected bsElement pom;
-	@BeforeTest
+	public  static Logger logger;
+	@BeforeSuite(alwaysRun = true)
 	@Parameters({ "Browser", "Url" })
 	void setup_Browser(String browser, String appUrl) {
+		
+		logger=LogManager.getLogger(this.getClass());
+		
 		if (browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
@@ -42,7 +48,7 @@ public class BaseClass  {
 			driver.quit();
 		}
 
-		driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(5));
+		driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(2));
 		driver.get(appUrl);
 		// Maximize the window.
 		driver.manage().window().maximize();
@@ -50,7 +56,7 @@ public class BaseClass  {
 //*********************************************************************************************************************	
 	
 	
-	@Test(priority = 1,groups = {"Sanity"})
+	@Test(priority = 1,groups = {"Smoke test","Master test"})
 	   void VerifyWebsite() throws InterruptedException, IOException {
 		   System.out.println("==========================================================================");
 		   System.out.println("TC_001_Verify_Website");
@@ -59,7 +65,7 @@ public class BaseClass  {
 		   pageObjectModel.Verify();
 	   }
 
-	@Test(priority = 2 ,groups = {"Sanity","Regression"})
+	@Test(priority = 2,groups = {"Sanity test","Regression test","Master test"})
 	void displayBookShelves() throws InterruptedException, IOException {
 		System.out.println("==========================================================================");
 		System.out.println("TC_002_DisplayBookShelves");
@@ -69,7 +75,7 @@ public class BaseClass  {
 		
 	}
 
-	@Test(priority = 3,groups = {"Sanity","Regression"})
+	@Test(priority = 3,groups = {"Regression test","Master test"})
 	void ByAtHome() throws InterruptedException, IOException {
 		System.out.println("==========================================================================");
 		System.out.println("TC_003_FilterBookShelves");
@@ -79,7 +85,7 @@ public class BaseClass  {
 		
 	}
 
-	@Test(priority = 4,groups = {"Sanity"} )
+	@Test(priority = 4,groups = {"Sanity test","Master test" })
 	void giftCard() throws InterruptedException, IOException {
 		System.out.println("==========================================================================");
 		System.out.println("TC_004_GiftCard");
@@ -88,7 +94,7 @@ public class BaseClass  {
 		   pageObjectModel.GiftCard();
 	}
 	
-	@Test(priority = 5 ,groups = {"Sanity","Regression"})
+	@Test(priority = 5,groups = {"Sanity test","Regression test","Master test"} )
 	void giftCardformNegative() throws InterruptedException, IOException {
 		System.out.println("==========================================================================");
 		System.out.println("TC_005_GiftCardFormNegative");
@@ -97,7 +103,7 @@ public class BaseClass  {
 		   pageObjectModel.GiftCardformNegative();
 	}
 	
-	@Test(priority = 6,groups = {"Sanity","Regression"})
+	@Test(priority = 6,groups = { "Sanity test","Regression test","Master test"})
 	void giftCardformPositive() throws InterruptedException, IOException {
 		System.out.println("==========================================================================");
 		System.out.println("TC_006_GiftCardFormPositive");
@@ -105,8 +111,8 @@ public class BaseClass  {
 		TC_006_GiftCardFormsPositive pageObjectModel = new TC_006_GiftCardFormsPositive(driver);
 		   pageObjectModel.GiftCardformPositive();
 	}
-
-	@AfterTest
+//******************************************************************************************************************
+	@AfterSuite(alwaysRun = true)
 	void close_Browser() {
 		driver.quit();
 	}
